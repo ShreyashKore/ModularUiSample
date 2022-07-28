@@ -1,7 +1,10 @@
 package com.shreyashkore.modularuisample.showcase
 
 import android.hardware.camera2.CameraManager.AvailabilityCallback
+import android.widget.Space
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
@@ -15,16 +18,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
 import com.shreyashkore.modularuisample.R
+import com.shreyashkore.modularuisample.core.ui.components.TextWithIcon
 import com.shreyashkore.modularuisample.data.Book
 import com.shreyashkore.modularuisample.data.SAMPLE_BOOKS
 import com.shreyashkore.modularuisample.navigation.Screen
-import com.shreyashkore.modularuisample.ui.theme.ModularUiSampleTheme
+import com.shreyashkore.modularuisample.core.ui.theme.ModularUiSampleTheme
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun BookDetailsScreen(
     book: Book?
@@ -38,21 +44,28 @@ fun BookDetailsScreen(
             }
 
             item {
-                Image(
-                    painter = painterResource(id = R.drawable.ic_launcher_foreground),
+                AsyncImage(
+                    model = "file:///android_asset/" + book.imageUri,
                     contentDescription = null,
+                    placeholder = painterResource(id = R.drawable.ic_launcher_foreground),
+                    alignment = Alignment.TopCenter,
+                    contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .heightIn(360.dp)
                         .fillMaxWidth()
                 )
             }
 
-            item {
+            stickyHeader {
                 Text(
                     text = book.title,
                     style = MaterialTheme.typography.headlineLarge,
-                    modifier = Modifier.padding(16.dp)
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .background(MaterialTheme.colorScheme.surface)
                 )
+            }
+            item {
                 Row(
                     modifier = Modifier
                         .padding(16.dp, 4.dp)
@@ -96,6 +109,9 @@ fun BookDetailsScreen(
                 )
             }
 
+            item {
+                Spacer(modifier = Modifier.height(450.dp))
+            }
         }
 
     }
@@ -141,27 +157,7 @@ fun AvailabilityIndicator(
     )
 }
 
-@Composable
-fun TextWithIcon(
-    icon: ImageVector,
-    text: String,
-    modifier: Modifier = Modifier,
-) {
-    Row(
-        modifier = modifier,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Icon(
-            imageVector = icon,
-            contentDescription = null
-        )
-        Spacer(modifier = Modifier.width(8.dp))
-        Text(
-            text = text,
-            modifier = Modifier.padding(8.dp)
-        )
-    }
-}
+
 
 @Preview
 @Composable

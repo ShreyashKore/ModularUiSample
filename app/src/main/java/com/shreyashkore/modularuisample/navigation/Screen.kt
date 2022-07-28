@@ -4,11 +4,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.*
 import androidx.compose.ui.graphics.vector.ImageVector
 
-val navItems = listOf(
-    Screen.Showcase,
-    Screen.Scanner,
-    Screen.Audit,
-)
+
 
 sealed class Screen(
     val title: String,
@@ -27,3 +23,9 @@ sealed class Screen(
     object Showcase : Screen("Showcase", Icons.Rounded.Book, "book")
     object Audit : Screen("Audit", Icons.Rounded.Calculate, "audit")
 }
+
+val SAMPLE_SCREEN_LIST = listOf(
+    Screen.Showcase,
+    Screen.Scanner,
+    Screen.Audit,
+)

@@ -19,8 +19,8 @@ import androidx.navigation.compose.rememberNavController
 import com.shreyashkore.modularuisample.data.ShopFeatures
 import com.shreyashkore.modularuisample.data.toUiFeatures
 import com.shreyashkore.modularuisample.navigation.NavGraph
-import com.shreyashkore.modularuisample.navigation.navItems
-import com.shreyashkore.modularuisample.ui.theme.ModularUiSampleTheme
+import com.shreyashkore.modularuisample.core.ui.theme.ModularUiSampleTheme
+import com.shreyashkore.modularuisample.navigation.Screen
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
@@ -42,6 +42,11 @@ fun MainScreen() {
         mutableStateOf(ShopFeatures(true, true, true))
     }
     val uiFeatures = shopFeatures.toUiFeatures()
+    val navItems = listOfNotNull(
+        Screen.Showcase,
+        if (shopFeatures.scannerEnabled) Screen.Scanner else null,
+        if (shopFeatures.auditEnabled) Screen.Audit else null,
+    )
     val navController = rememberNavController()
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val scope = rememberCoroutineScope()
@@ -112,7 +117,7 @@ fun TextWithCheckBox(
     text: String,
     onCheckChanged: (Boolean) -> Unit,
     checked: Boolean,
-    modifier : Modifier = Modifier,
+    modifier: Modifier = Modifier,
 ) {
     Row(
         modifier = modifier,

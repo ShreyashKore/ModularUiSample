@@ -21,6 +21,10 @@ class ScannerViewModel : ViewModel(
         booksScanned.value = booksScanned.value - book
     }
 
+    fun clearAll() {
+        booksScanned.value = emptyList()
+    }
+
     fun makeCopy(book: Book) {
 
     }

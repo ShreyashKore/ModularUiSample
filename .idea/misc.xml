@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/4idiots/Documents/Android/ModularUiSample/app/src/main/java/com/shreyashkore/modularuisample/showcase/BookDetails.kt" value="0.25" />
+        <entry key="..\:/Users/4idiots/Documents/Android/ModularUiSample/app/src/main/java/com/shreyashkore/modularuisample/cart/CartScreen.kt" value="0.33" />
+        <entry key="..\:/Users/4idiots/Documents/Android/ModularUiSample/app/src/main/java/com/shreyashkore/modularuisample/cart/CartUi.kt" value="0.33" />
+        <entry key="..\:/Users/4idiots/Documents/Android/ModularUiSample/app/src/main/java/com/shreyashkore/modularuisample/core/ui/HomeScreen.kt" value="0.33" />
+        <entry key="..\:/Users/4idiots/Documents/Android/ModularUiSample/app/src/main/java/com/shreyashkore/modularuisample/core/ui/components/QuantitySelector.kt" value="2.0" />
+        <entry key="..\:/Users/4idiots/Documents/Android/ModularUiSample/app/src/main/java/com/shreyashkore/modularuisample/scanner/ScannerScreen.kt" value="0.5" />
+        <entry key="..\:/Users/4idiots/Documents/Android/ModularUiSample/app/src/main/java/com/shreyashkore/modularuisample/showcase/BookDetails.kt" value="0.33" />
+        <entry key="..\:/Users/4idiots/Documents/Android/ModularUiSample/app/src/main/java/com/shreyashkore/modularuisample/showcase/Showcase.kt" value="0.33" />
       </map>
     </option>
   </component>

@@ -4,7 +4,7 @@ package com.shreyashkore.modularuisample.scanner
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Create
 import androidx.compose.runtime.Composable
-import com.shreyashkore.modularuisample.ui.HomeTile
+import com.shreyashkore.modularuisample.core.ui.HomeTile
 
 object ScannerUi
 

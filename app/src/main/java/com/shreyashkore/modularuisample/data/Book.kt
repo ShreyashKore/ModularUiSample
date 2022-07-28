@@ -26,7 +26,7 @@ val SAMPLE_BOOKS = listOf(
         2,
         "To Kill a Mockingbird",
         "Harper Lee",
-        "harry-potter.jpg",
+        "to-kill-a-mockingbird.jpg",
         4.5f,
         "To Kill a Mockingbird is a novel by the American author Harper Lee. It was published in 1960 and was instantly successful. In the United States, it is widely read in high schools and middle schools. To Kill a Mockingbird has become a classic of modern American literature, winning the Pulitzer Prize.",
         20
@@ -35,7 +35,7 @@ val SAMPLE_BOOKS = listOf(
         3,
         "The Great Gatsby",
         "F. Scott Fitzgerald",
-        "harry-potter.jpg",
+        "the-great-gatsby.jpg",
         4.3f,
         "The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. " +
                 "Set in the Jazz Age on Long Island, near New York City, the novel depicts first-person narrator Nick Carraway's interactions with mysterious millionaire Jay Gatsby and Gatsby's obsession to reunite with his former lover, Daisy Buchanan.",
@@ -45,7 +45,7 @@ val SAMPLE_BOOKS = listOf(
         4,
         "The Alchemist",
         "Paulo Coelho",
-        "harry-potter.jpg",
+        "the-alchemist.jpg",
         3.5f,
         "The Alchemist details the journey of a young Andalusian shepherd boy named Santiago. Santiago, believing a recurring dream to be prophetic, decides to travel to the pyramids of Egypt to find treasure.",
         5
@@ -54,7 +54,7 @@ val SAMPLE_BOOKS = listOf(
         5,
         "Pride and Prejudice",
         "Jane Austen",
-        "harry-potter.jpg",
+        "pride-and-prejudice.jpg",
         3.3f,
         "Pride and Prejudice, romantic novel by Jane Austen, published anonymously in three volumes in 1813.",
         7

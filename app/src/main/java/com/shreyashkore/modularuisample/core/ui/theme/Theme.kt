@@ -1,4 +1,4 @@
-package com.shreyashkore.modularuisample.ui.theme
+package com.shreyashkore.modularuisample.core.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -60,6 +60,7 @@ fun ModularUiSampleTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
+        shapes = Shapes,
         typography = Typography,
         content = content
     )

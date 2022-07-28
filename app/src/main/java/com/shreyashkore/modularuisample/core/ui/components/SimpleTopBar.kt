@@ -1,4 +1,4 @@
-package com.shreyashkore.modularuisample.ui
+package com.shreyashkore.modularuisample.core.ui
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material3.MaterialTheme

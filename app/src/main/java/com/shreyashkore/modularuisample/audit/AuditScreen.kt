@@ -13,7 +13,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.shreyashkore.modularuisample.data.Book
 import com.shreyashkore.modularuisample.data.SAMPLE_BOOKS
-import com.shreyashkore.modularuisample.ui.SimpleTopBar
+import com.shreyashkore.modularuisample.core.ui.SimpleTopBar
 
 object AuditUi
 

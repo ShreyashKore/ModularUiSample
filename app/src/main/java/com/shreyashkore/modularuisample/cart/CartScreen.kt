@@ -1,6 +1,8 @@
 package com.shreyashkore.modularuisample.cart
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
@@ -11,10 +13,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.shreyashkore.modularuisample.cart.CartUi.ClearAll
 import com.shreyashkore.modularuisample.data.Book
-import com.shreyashkore.modularuisample.ui.SimpleTopBar
+import com.shreyashkore.modularuisample.data.SAMPLE_BOOKS
+import com.shreyashkore.modularuisample.core.ui.SimpleTopBar
+import com.shreyashkore.modularuisample.core.ui.theme.ModularUiSampleTheme
 
 @Composable
 fun CartScreen() {
@@ -60,7 +65,10 @@ fun CartScreen(
         }
     ) { innerPadding ->
         Column(modifier = Modifier.padding(innerPadding)) {
-            LazyColumn {
+            LazyColumn(
+                contentPadding = PaddingValues(10.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp),
+            ) {
                 itemsIndexed(books) { i, book ->
                     CartItem(
                         onQuantityChange = { },
@@ -75,13 +83,17 @@ fun CartScreen(
 }
 
 
-
 @Preview
 @Composable
 private fun CartScreenPreview() {
-//    AuditScreen(
-//
-//    )
+    ModularUiSampleTheme {
+        CartScreen(
+            deleteItem = {},
+            checkOut = {},
+            clearAll = {},
+            books = SAMPLE_BOOKS
+        )
+    }
 }
 
 

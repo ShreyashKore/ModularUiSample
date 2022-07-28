@@ -15,7 +15,7 @@ import com.shreyashkore.modularuisample.data.BookRepositoryMock
 import com.shreyashkore.modularuisample.scanner.ScannerScreen
 import com.shreyashkore.modularuisample.showcase.BookDetailsScreen
 import com.shreyashkore.modularuisample.showcase.ShowcaseScreen
-import com.shreyashkore.modularuisample.ui.HomeScreen
+import com.shreyashkore.modularuisample.core.ui.HomeScreen
 
 @Composable
 fun NavGraph(

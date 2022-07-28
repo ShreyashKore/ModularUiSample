@@ -1,4 +1,4 @@
-package com.shreyashkore.modularuisample.ui.theme
+package com.shreyashkore.modularuisample.core.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
